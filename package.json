@@ -1,0 +1,19 @@
+{
+  "name": "apiconsumption",
+  "version": "1.0.0",
+  "description": "consumption of APIs REST with JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KuroKami022/apiConsumption.git"
+  },
+  "author": "@KuroKami022",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KuroKami022/apiConsumption/issues"
+  },
+  "homepage": "https://github.com/KuroKami022/apiConsumption#readme"
+}
