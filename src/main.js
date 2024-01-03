@@ -60,8 +60,6 @@ function createCategories(categories, container) {
 async function getTrendingMoviesPreview() {
   const { data } = await api('trending/movie/day');
   const movies = data.results;
-  console.log(movies)
-
   createMovies(movies, trendingMoviesPreviewList);
 }
 
