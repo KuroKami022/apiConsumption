@@ -10,70 +10,60 @@
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&family=Red+Hat+Display:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles/app.css" />
 
-  <title>Entertainment Plus</title>
+  <title>PlatziMovies</title>
 </head>
 <body>
   <header id="header" class="header-container">
     <span class="header-arrow inactive">&lt;</span>
-    <h1 class="header-title">Entertainment Plus</h1>
-    <h1 class="header-title header-title--categoryView inactive">Action</h1>
+    <h1 class="header-title">PlatziMovies</h1>
+    <h1 class="header-title header-title--categoryView inactive">Acción</h1>
 
     <form id="searchForm" class="header-searchForm">
-      <input type="text" placeholder="Avengers" />
+      <input type="text" placeholder="Vengadores" />
       <button id="searchBtn">🔍</button>
     </form>
   </header>
 
   <section id="trendingPreview" class="trendingPreview-container">
     <div class="trendingPreview-header">
-      <h2 class="trendingPreview-title">Trending</h2>
-      <button class="trendingPreview-btn">Show me more!</button>
+      <h2 class="trendingPreview-title">Tendencias</h2>
+      <button class="trendingPreview-btn">Ver más</button>
     </div>
 
     <article class="trendingPreview-movieList">
-      <!-- <div class="movie-container">
-        <img
+      <div class="movie-container movie-container--loading"></div>
+      <div class="movie-container movie-container--loading"></div>
+      <div class="movie-container movie-container--loading">
+        <!-- <img
           src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
           class="movie-img"
-          alt="Movie Name"
-        />
-      </div> -->
+          alt="Nombre de la película"
+        /> -->
+      </div>
     </article>
   </section>
 
   <section id="categoriesPreview" class="categoriesPreview-container">
-    <h2 class="categoriesPreview-title">Categories</h2>
+    <h2 class="categoriesPreview-title">Categorías</h2>
 
     <article class="categoriesPreview-list">
-      <!-- <div class="category-container">
-        <h3 id="id28" class="category-title">Romance</h3>
-      </div> -->
+      <div class="category-container category-container--loading"></div>
+      <div class="category-container category-container--loading"></div>
+      <div class="category-container category-container--loading">
+        <!-- <h3 id="id28" class="category-title">Romance</h3> -->
+      </div>
     </article>
   </section>
 
   <section id="genericList" class="genericList-container inactive">
-    <div class="movie-container">
-      <img
+    <div class="movie-container movie-container--loading"></div>
+    <div class="movie-container movie-container--loading"></div>
+    <div class="movie-container movie-container--loading">
+      <!-- <img
         src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
         class="movie-img"
-        alt="Movie Name"
-      />
-    </div>
-
-    <div class="movie-container">
-      <img
-        src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
-        class="movie-img"
-        alt="Movie Name"
-      />
-    </div>
-
-    <div class="movie-container">
-      <img
-        src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
-        class="movie-img"
-        alt="Movie Name"
-      />
+        alt="Nombre de la película"
+      /> -->
     </div>
   </section>
 
@@ -85,51 +75,31 @@
     </p>
 
     <article class="categories-list">
-      <div class="category-container">
-        <h3 id="id28" class="category-title">Romance</h3>
-      </div>
-
-      <div class="category-container">
-        <h3 id="id16" class="category-title">Drama</h3>
-      </div>
-
-      <div class="category-container">
-        <h3 id="id14" class="category-title">Action</h3>
+      <div class="category-container category-container--loading"></div>
+      <div class="category-container category-container--loading"></div>
+      <div class="category-container category-container--loading">
+        <!-- <h3 id="id28" class="category-title">Romance</h3> -->
       </div>
     </article>
 
     <article class="relatedMovies-container">
-      <h2 class="relatedMovies-title">Related Movies</h2>
+      <h2 class="relatedMovies-title">Películas similares</h2>
 
       <div class="relatedMovies-scrollContainer">
-        <div class="movie-container">
-          <img
+        <div class="movie-container movie-container--loading"></div>
+        <div class="movie-container movie-container--loading"></div>
+        <div class="movie-container movie-container--loading">
+          <!-- <img
             src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
             class="movie-img"
-            alt="Movie Name"
-          />
-        </div>
-        
-        <div class="movie-container">
-          <img
-            src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
-            class="movie-img"
-            alt="Movie Name"
-          />
-        </div>
-        
-        <div class="movie-container">
-          <img
-            src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
-            class="movie-img"
-            alt="Movie Name"
-          />
+            alt="Nombre de la película"
+          /> -->
         </div>
       </div>
     </article>
   </section>
 
-  <footer>All rights reserved.</footer>
+  <footer>Hecho con amor en Platzi por @juandc</footer>
   
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./src/secrets.js"></script>
