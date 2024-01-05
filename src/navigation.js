@@ -1,3 +1,6 @@
+let page = 1;
+let infiniteScroll;
+
 searchFormBtn.addEventListener('click', () => {
   location.hash = '#search=' + searchFormInput.value;
 });
@@ -13,9 +16,16 @@ arrowBtn.addEventListener('click', () => {
 
 window.addEventListener('DOMContentLoaded', navigator, false);
 window.addEventListener('hashchange', navigator, false);
+window.addEventListener('scroll', infiniteScroll, false);
 
 function navigator() {
+  console.log({ location });
 
+  if (infiniteScroll) {
+    window.removeEventListener('scroll', infiniteScroll, { passive: false });
+    infiniteScroll = undefined;
+  }
+  
   if (location.hash.startsWith('#trends')) {
     trendsPage();
   } else if (location.hash.startsWith('#search=')) {
@@ -30,9 +40,14 @@ function navigator() {
 
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+
+  if (infiniteScroll) {
+    window.addEventListener('scroll', infiniteScroll, { passive: false });
+  }
 }
 
 function homePage() {
+  console.log('Home!!');
 
   headerSection.classList.remove('header-container--long');
   headerSection.style.background = '';
@@ -52,6 +67,7 @@ function homePage() {
 }
 
 function categoriesPage() {
+  console.log('categories!!');
 
   headerSection.classList.remove('header-container--long');
   headerSection.style.background = '';
@@ -76,6 +92,7 @@ function categoriesPage() {
 }
 
 function movieDetailsPage() {
+  console.log('Movie!!');
 
   headerSection.classList.add('header-container--long');
   // headerSection.style.background = '';
@@ -96,6 +113,7 @@ function movieDetailsPage() {
 }
 
 function searchPage() {
+  console.log('Search!!');
 
   headerSection.classList.remove('header-container--long');
   headerSection.style.background = '';
@@ -116,6 +134,7 @@ function searchPage() {
 }
 
 function trendsPage() {
+  console.log('TRENDS!!');
 
   headerSection.classList.remove('header-container--long');
   headerSection.style.background = '';
@@ -133,4 +152,6 @@ function trendsPage() {
   headerCategoryTitle.innerHTML = 'Tendencias';
 
   getTrendingMovies();
+
+  infiniteScroll = getPaginatedTrendingMovies;
 }
